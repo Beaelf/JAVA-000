@@ -1,0 +1,31 @@
+server:
+  port: 8088
+spring:
+  datasource:
+    master:
+      url: jdbc:mysql://127.0.0.1:3306/master?useUnicode=true&characterEncoding=UTF-8
+      driver-class-name: com.mysql.jdbc.Driver
+      username: root
+      password: root
+      type: com.zaxxer.hikari.HikariDataSource
+    cluster:
+      - key: slave1
+        url: jdbc:mysql://127.0.0.1:3306/megetood-foodie-shop2?useUnicode=true&characterEncoding=UTF-8
+        driver-class-name: com.mysql.jdbc.Driver
+        username: root
+        password: root
+        type: com.zaxxer.hikari.HikariDataSource
+        idle-timeout: 20000
+      - key: slave2
+        url: jdbc:mysql://127.0.0.1:3306/megetood-foodie-shop3?useUnicode=true&characterEncoding=UTF-8
+        driver-class-name: com.mysql.jdbc.Driver
+        username: root
+        password: root
+
+mybatis:
+  type-aliases-package: com.megetood.pojo          # 所有POJO类所在包路径
+  mapper-locations: classpath:mapper/*.xml      # mapper映射文件
+  mapper:
+mappers: com.megetood.my.mapper.MyMapper
+  not-empty: false    # 在进行数据库操作的的时候，判断表达式 username != null, 是否追加 username != ''
+  identity: MYSQL

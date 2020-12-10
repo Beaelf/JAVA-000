@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.megetood.geek.week07.dynamicdatasource.domain.ItemsMapper" >
+
+
+  <!-- 工作上，不适用select *。 这里知识为了方便 -->
+
+  <select id="selectByName" parameterType="java.lang.String" resultType="com.megetood.geek.week07.dynamicdatasource.domain.Items">
+    select * from items where item_name = #{name}
+  </select>
+  <select id="selectById" parameterType="java.lang.Long" resultType="com.megetood.geek.week07.dynamicdatasource.domain.Items">
+    select * from items where item_name = #{id}
+  </select>
+</mapper>
