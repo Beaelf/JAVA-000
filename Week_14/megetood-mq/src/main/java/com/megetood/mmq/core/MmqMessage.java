@@ -1,4 +1,4 @@
-package com.megetood.mq.core;
+package com.megetood.mmq.core;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

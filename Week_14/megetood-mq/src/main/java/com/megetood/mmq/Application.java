@@ -1,4 +1,4 @@
-package com.megetood.mq;
+package com.megetood.mmq;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

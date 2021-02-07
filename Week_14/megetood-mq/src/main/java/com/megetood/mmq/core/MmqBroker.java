@@ -1,4 +1,4 @@
-package com.megetood.mq.core;
+package com.megetood.mmq.core;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -7,14 +7,14 @@ public final class MmqBroker { // Broker+Connection
 
     public static final int CAPACITY = 10000;
 
-    private final Map<String, Mmq> kmqMap = new ConcurrentHashMap<>(64);
+    private final Map<String, Mmq> mmqMap = new ConcurrentHashMap<>(64);
 
     public void createTopic(String name){
-        kmqMap.putIfAbsent(name, new Mmq(name,CAPACITY));
+        mmqMap.putIfAbsent(name, new Mmq(name,CAPACITY));
     }
 
     public Mmq findKmq(String topic) {
-        return this.kmqMap.get(topic);
+        return this.mmqMap.get(topic);
     }
 
     public MmqProducer createProducer() {

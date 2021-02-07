@@ -1,4 +1,4 @@
-package com.megetood.mq.core;
+package com.megetood.mmq.core;
 
 public class MmqProducer {
 
@@ -10,7 +10,9 @@ public class MmqProducer {
 
     public boolean send(String topic, MmqMessage message) {
         Mmq kmq = this.broker.findKmq(topic);
-        if (null == kmq) throw new RuntimeException("Topic[" + topic + "] doesn't exist.");
+        if (null == kmq) {
+            throw new RuntimeException("Topic[" + topic + "] doesn't exist.");
+        }
         return kmq.send(message);
     }
 }

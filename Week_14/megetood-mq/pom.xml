@@ -8,10 +8,10 @@
         <version>2.2.9.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.megetood.mq</groupId>
+    <groupId>com.megetood.mmq</groupId>
     <artifactId>megetood-mq</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>kmq-core</name>
+    <name>Mmq</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -40,6 +40,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
 

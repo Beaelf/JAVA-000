@@ -1,9 +1,9 @@
-package com.megetood.mq.demo;
+package com.megetood.mmq.demo;
 
-import com.megetood.mq.core.MmqBroker;
-import com.megetood.mq.core.MmqConsumer;
-import com.megetood.mq.core.MmqMessage;
-import com.megetood.mq.core.MmqProducer;
+import com.megetood.mmq.core.MmqBroker;
+import com.megetood.mmq.core.MmqConsumer;
+import com.megetood.mmq.core.MmqMessage;
+import com.megetood.mmq.core.MmqProducer;
 
 import lombok.SneakyThrows;
 

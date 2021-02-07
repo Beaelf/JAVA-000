@@ -1,4 +1,4 @@
-package com.megetood.mq.core;
+package com.megetood.mmq.core;
 
 import lombok.SneakyThrows;
 
@@ -17,7 +17,7 @@ public final class Mmq {
 
     private int capacity;
 
-    private LinkedBlockingQueue<MmqMessage> queue;
+    private LinkedBlockingQueue<com.megetood.mmq.core.MmqMessage> queue;
 
     public boolean send(MmqMessage message) {
         return queue.offer(message);
